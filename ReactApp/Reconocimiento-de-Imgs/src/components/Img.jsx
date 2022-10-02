@@ -3,7 +3,7 @@ import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import  "./LabelsList.css";
 
 export const Img = ({ props }) => {
-  console.log(`estas son las props de imagenes ${props}`)
+  // console.log(`estas son las props de imagenes ${props}`)
 
   const [ReferenciaImagenes, setReferenciaImagenes]=useState([]);
   useEffect( ()=>{
@@ -25,7 +25,6 @@ export const Img = ({ props }) => {
 
   return (
     <div className="container2">
-      <img src={ReferenciaImagenes} className='img'></img>
-     
+      <img src={ReferenciaImagenes} className='img'></img>     
     </div> )
 };

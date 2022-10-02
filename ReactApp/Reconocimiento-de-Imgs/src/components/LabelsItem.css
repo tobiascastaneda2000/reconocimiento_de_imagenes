@@ -17,13 +17,16 @@
 }
 
 .etiqueta{
-    margin-left: 100px;  
+    margin-left: 100px;
+    display: inline-block;
+    margin: 0 0;
 }
 
 .card{
     border: 1px solid seagreen;
     padding: 2rem;
-    margin-top: 10px;
+    margin: 10px 15px;   
+    max-height: 325px;
 }
 
 

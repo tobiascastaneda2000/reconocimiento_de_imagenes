@@ -1,20 +1,16 @@
+import { Button } from '@mui/material';
 import React from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
+import './Buttonverhistoria.css';
 
 export const Buttonverhistoria = (props)=>{
 
-    console.log(`estas son  los valores de las props del boton ${Object.values(props)}`);
+    const navigate= useNavigate();
+
+    const linkTo=()=>{
+        navigate(`/historia/${Object.values(props)}`);
+    }
     /*let nuevoIndices= props.maps(=>(element){ element})*/
-    return <Link to={`/historia/${Object.values(props)}`} className="button">  ver historia    </Link>
-
-        
-
-
-
-
-
-
-
+    return (<Button onClick={linkTo} variant='contained'>ver historia</Button>)
 }

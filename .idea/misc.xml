@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_capture.xml" value="0.22604166666666667" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_titule.xml" value="0.21" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_web.xml" value="0.22" />
         <entry key="..\:/Users/gabi_/Documents/AndroidProyects/Ateneo2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/gabi_/Documents/AndroidProyects/Ateneo2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/gabi_/Documents/AndroidProyects/Ateneo2/app/src/main/res/layout/activity_analysis.xml" value="0.10371376811594203" />

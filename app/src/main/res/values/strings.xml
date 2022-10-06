@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Ateneo2</string>
     <string name="btn_capturar_img">Capturar</string>
     <string name="btn_ver_repositorio">Repositorio</string>
-    <string name="txt_el_ateneo">El Ateneo</string>
-    <string name="txt_espacio">Espacio de tecnologías aplicadas</string>
+
     <string name="take_photo">Tomar Foto</string>
     <string name="start_capture">Grabar</string>
     <string name="stop_capture">Parar</string>
@@ -15,5 +13,23 @@
     <string name="select_image_for_text_recognition">Seleccionar imagen</string>
     <string name="find_text_button">Reconocer Texto</string>
     <string name="find_face_contour_button">Reconocer cara</string>
+
+    <!-- Etiquetas Main -->
+    <string name="app_name">Asociacion Poetica aleatoria</string>
+    <string name="year">2 0 2 2</string>
+    <string name="instructions">Breve explicativo de como funciona la aplicacion paso a paso</string>
+    <string name="button_start">Comenzar</string>
+
+    <!-- Etiqueta repositorio prueba -->
+    <string name="button_web">Repositorio Web Prueba</string>
+
+    <!-- Etiquetas Cature -->
+    <string name="capture_photo">Capturar</string>
+
+
+    <!-- Etiquetas Titule -->
+    <string name="txt_el_ateneo">El Ateneo</string>
+    <string name="txt_espacio">Espacio de tecnologías aplicadas</string>
+    <string name="txt_tecnologies">tecnologías utilizadas: </string>
 
 </resources>

@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchWebActivity(View view) {
+        Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
+    }
+
     //Solicitud de permisos
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void verificarPermisos() {

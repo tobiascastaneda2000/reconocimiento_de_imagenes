@@ -22,6 +22,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -137,13 +138,16 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
             case R.id.btn_file:
-                launchAnalysisActivity();
+                //launchAnalysisActivity(view);
         }
     }
 
-    private void launchAnalysisActivity() {
+    private void launchAnalysisActivity(Uri uri) {
+
         Intent intent = new Intent(this, AnalysisActivity.class);
+        intent.putExtra("image", uri);
         startActivity(intent);
+
     }
 
     private void capturePhoto() {
@@ -165,6 +169,8 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         Toast.makeText(CaptureActivity.this, "Foto guardada", Toast.LENGTH_SHORT).show();
+                        Uri uri = outputFileResults.getSavedUri();
+                        launchAnalysisActivity(uri);
                     }
 
                     @Override

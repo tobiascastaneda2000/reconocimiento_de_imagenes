@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -43,6 +44,7 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
     private InputImage imageInput;
     private Task<Text> result;
     private Task<Pose> resultPoses;
+    private Uri uri;
     // To use default options:
     ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
 
@@ -59,7 +61,7 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analysis);
-        cargarImagen();
+        //cargarImagen();
         image = (ImageView) findViewById(R.id.analysis_iv);
 
         Button buttonAnalyzer = findViewById(R.id.button_analizer);
@@ -70,7 +72,19 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
         buttonAnalyzer.setOnClickListener(this);
         buttonPosesDetect.setOnClickListener(this);
 
+        Bundle extras = getIntent().getExtras();
+        if(extras!=null){
+            uri=Uri.parse(extras.get("image").toString());
+            image.setImageURI(uri);
+            try {
+                imageInput = InputImage.fromFilePath(this, uri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
+ /*
 
     public void cargarImagen() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -91,7 +105,7 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
             }
         }
     }
-
+*/
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

@@ -2,17 +2,20 @@ package xyz.dev3k.ateneo2;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     int REQUEST_CODE = 200;
     private static final String LOG_TAG =
             MainActivity.class.getSimpleName();
@@ -23,7 +26,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         verificarPermisos();
+
+        Button buttonComenzar = findViewById(R.id.btn_comenzar);
+        Button buttonRepositorio = findViewById(R.id.btn_repositorio);
+        Button buttonEtiquetar = findViewById(R.id.btn_etiquetar);
+
+        buttonComenzar.setOnClickListener(this);
+        buttonRepositorio.setOnClickListener(this);
+        buttonEtiquetar.setOnClickListener(this);
+
     }
+
+
+    @SuppressLint("NonConstantResourceId")
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btn_comenzar:
+                launchCaptureActivity(view);
+                break;
+
+            case R.id.btn_repositorio:
+                launchWebActivity(view);
+                break;
+
+            case R.id.btn_etiquetar:
+                launchAnalysisActivity(view);
+                break;
+
+        }
+    }
+
+
     //Intent CaptureActivity
     public void launchCaptureActivity(View view) {
         Intent intent = new Intent(this, CaptureActivity.class);

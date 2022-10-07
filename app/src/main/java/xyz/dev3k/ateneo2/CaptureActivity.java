@@ -125,6 +125,7 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
         switch (view.getId()) {
             case R.id.image_capture_button:
                 capturePhoto();
+                //launchAnalysisActivity();
                 break;
             case R.id.video_capture_button:
                 if (videoCaptureButton.getText() == "grabar") {

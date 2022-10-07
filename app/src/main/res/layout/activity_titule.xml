@@ -33,6 +33,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="522dp"
+        android:fontFamily="@font/montserrat_thin"
         android:text="@string/txt_espacio"
         android:textColor="@color/green_ligth_atn"
         android:textSize="48sp"

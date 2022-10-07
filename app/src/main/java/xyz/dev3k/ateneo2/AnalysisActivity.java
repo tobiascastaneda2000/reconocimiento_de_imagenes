@@ -97,6 +97,7 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.button_analizer:
                 etiquetarImagen();
+                launchWebActivity(view);
                 break;
             case R.id.button_text_recognizer:
                 runTextRecognizer();
@@ -105,6 +106,12 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
                 runDetectPoses();
                 break;
         }
+    }
+
+    public void launchWebActivity(View view){
+        Intent intent = new Intent(this,
+                WebActivity.class);
+        startActivity(intent);
     }
 
     public void etiquetarImagen() {

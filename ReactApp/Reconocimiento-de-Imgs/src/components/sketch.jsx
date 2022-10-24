@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react"
 
 export function sketch(p){
   
@@ -26,7 +25,7 @@ export function sketch(p){
       if (this.y<=0) {
         this.y =p.height+20;
       }
-      p.ellipse(this.x+p.random(2), this.y, 110, 110);
+      p.ellipse(this.x+p.random(2), this.y, p.windowWidth*0.1 , p.windowWidth*0.1);
     }
   }
 
@@ -104,6 +103,10 @@ let Font;
 let Font2;
 let displayTimeSentence;
 let sentences;
+let fontSize;
+let link = p.createA('http://localhost:3000/', 'volver')
+link.position(p.windowWidth*0.5, p.windowHeight*0.8)
+
 rotationSpeed=1;
   rotation=1;
   rotation2=360;
@@ -124,17 +127,15 @@ rotationSpeed=1;
   }
 
   p.setup=() =>{
-
-
+  
+  
+   
   p.createCanvas(p.displayWidth, p.displayHeight);
   Font2=p.loadFont("../../assets/RobotoCondensedRegular.otf",50);
 
-  /*p.textFont(Font);*/
-
-  sentence="La casa roja emergio volando";
   for ( let i=0; i<100; i++){
-    burbujas.push(new Burbuja (p.random(p.width),p.random(p.height)+20*i,p.color(48,66,200,20)));}
-   for( let i =0; i<8; i++)
+    burbujas.push(new Burbuja (p.random(p.windowWidth),p.random(p.windowHeight)+20*i,p.color(48,66,200,20)));}
+   for( let i =0; i<10; i++)
      { 
       flowers.push(new Flower(color1,color4));
      
@@ -144,47 +145,89 @@ rotationSpeed=1;
  
   
   
-    /* for( i =0; i<figuras6.length; i++)
-    { 
-      figuras6[i]= new Figura6(color4,color5, color1);}*/
 
   
 }
 
 p.draw=()=>{
-displayTimeSentence=p.round(p.millis()/5000);
-
-/*p.fill(250,60,20,150);      
-p.textAlign(p.CENTER);
-p.textFont(Font2,70);
-p.text(displayTimeSentence,500,500); */
-
-
-if ( displayTimeSentence< sentences.length)
-  {p.fill(250,60,20,150);      
-  p.textAlign(p.CENTER);
-  p.textFont(Font2,50);
-  p.text(sentences[displayTimeSentence],900,500); }
-  else{ p.fill(250,60,20,150);      
-    p.textAlign(p.CENTER);
-    p.textFont(Font2,50);
-    p.text("Fin de la historia",900,500); }
-
-
+  
+displayTimeSentence=p.round(p.millis()/3000);
 
   p.fill(9,2,36,70);
   p.rect(0,0,p.displayWidth, p.displayHeight);
+  for(let i=0; i<100; i++){
+    upSpeed=p.int(p.random(3));
+   burbujas[i].up(upSpeed);}
+  
+   if( p.windowWidth <=720)
+
+{   if ( displayTimeSentence< sentences.length)
+   {p.fill(250,60,20,150);      
+   p.textAlign(p.CENTER, p.CENTER);
+   p.textWrap(p.WORD);
+   p.textSize(40);
+   p.text(sentences[displayTimeSentence],p.windowWidth/10,p.windowHeight/10, p.windowWidth*0.8, p.windowHeight*0.8)}
+   else{ p.fill(250,60,20,150);      
+     p.textAlign(p.CENTER, p.CENTER);
+     p.textFont(Font2,40);
+     p.text("Fin de la historia",p.windowWidth/2,p.windowHeight/2); 
+     p.noFill()
+     p.strokeWeight(1);
+     p.stroke(color1);
+     /*p.fill(13,17,54)
+     p.rect(p.windowWidth/3,p.windowHeight*0.58, p.windowWidth/3,50, 25);
+     p.noStroke();
+     p.fill(color1);
+     p.textSize(40)
+     p.text("Volver", p.windowWidth*0.5, p.windowHeight*0.6)*/
+   
+    } }
+
+     else {
+
+      if ( displayTimeSentence< sentences.length)
+      {p.fill(250,60,20,150);      
+      p.textAlign(p.CENTER, p.CENTER);
+      p.textWrap(p.WORD);
+      p.textSize(50);
+      p.text(sentences[displayTimeSentence],p.windowWidth/6,p.windowHeight/15, p.windowWidth*0.8, p.windowHeight*0.8)}
+      else{ p.fill(250,60,20,150);      
+        p.textAlign(p.CENTER, p.CENTER);
+        p.textFont(Font2,50);
+        p.text("Fin de la historia",p.windowWidth/2,p.windowHeight/2); 
+        p.noFill()
+        p.strokeWeight(1);
+        p.stroke(color1);
+        p.fill(13,17,54)
+        p.rect(p.windowWidth*0.45,p.windowHeight*0.57, p.windowWidth*0.1,60,p.windowWidth*0.04);
+        p.noStroke();
+       /* p.fill(color1);
+        p.textFont(Font2,50) 
+        p.text("Volver", p.windowWidth*0.5, p.windowHeight*0.6)*/
+     
+        
+      }
+
+
+
+
+
+     }
+
+
+
+
+if ( p.windowWidth  <= 720 )
+{p.scale(0.7);}
+
+
+
+
   
    let PositionX=100;
    let PositionY=100;
    
-   
-  
-   for(let i=0; i<100; i++){
-      upSpeed=p.int(p.random(3));
-     burbujas[i].up(upSpeed);}
-   
-  for (let i = 0; i<flowers.length; i++)
+   for (let i = 0; i<flowers.length; i++)
    { 
      
    p.push();
@@ -204,55 +247,16 @@ if ( displayTimeSentence< sentences.length)
    p.pop();
  }
 
- PositionY=p.displayHeight-250;
- PositionX=700;
-
-/*for (let b = 0; b<figuras6.length; b++)
-  { 
-   p.push();
-
-  p.translate(PositionX,PositionY);
-  
- if(scale>=1.6 ||scale<=0.9 )
-{scaleSpeed=-1*(scaleSpeed);}
-
-  {scale=scale+scaleSpeed;} 
-  p.scale(scale+p.random(0.001, 0.002));
-  p.rotate(p.radians(90));
-
-
-    figuras6[b].show();
-    PositionX=PositionX+1000;
-
- 
-     p.pop();
-}   
-     
-     
-
-/*if(millis()<2000)
-{ int fuente=70;
-  int y=height/2;
-  int opacity=160;
-  for(int i=0; i<2;i++)
- 
-  {fill(250,60,20,opacity); 
-  textAlign(CENTER);
-  textFont(Font2,fuente);
-  text(sentence,width/2,y);
-  y=y-60;
-  opacity=opacity-140;
-  fuente=fuente+20;} 
-  
- }
-
-if (millis()>2000)
-{
-textAlign(CENTER);
-textFont(Font2,70);
-text("el sol cayo",width/2,height/2);} */
-  
 
 
 
-}}
+
+
+
+}
+
+
+
+
+}
+

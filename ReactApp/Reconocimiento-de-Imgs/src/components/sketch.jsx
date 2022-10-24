@@ -172,9 +172,9 @@ displayTimeSentence=p.round(p.millis()/3000);
      p.textFont(Font2,40);
      p.text("Fin de la historia",p.windowWidth/2,p.windowHeight/2); 
      p.noFill()
-     p.strokeWeight(1);
+     /*p.strokeWeight(1);
      p.stroke(color1);
-     /*p.fill(13,17,54)
+     p.fill(13,17,54)
      p.rect(p.windowWidth/3,p.windowHeight*0.58, p.windowWidth/3,50, 25);
      p.noStroke();
      p.fill(color1);
@@ -196,12 +196,12 @@ displayTimeSentence=p.round(p.millis()/3000);
         p.textFont(Font2,50);
         p.text("Fin de la historia",p.windowWidth/2,p.windowHeight/2); 
         p.noFill()
-        p.strokeWeight(1);
+       /* p.strokeWeight(1);
         p.stroke(color1);
         p.fill(13,17,54)
         p.rect(p.windowWidth*0.45,p.windowHeight*0.57, p.windowWidth*0.1,60,p.windowWidth*0.04);
         p.noStroke();
-       /* p.fill(color1);
+       p.fill(color1);
         p.textFont(Font2,50) 
         p.text("Volver", p.windowWidth*0.5, p.windowHeight*0.6)*/
      
@@ -234,29 +234,5 @@ if ( p.windowWidth  <= 720 )
    p.translate(PositionX,PositionY);
  
  if(rotation<=360)
-   {rotation=rotation+0.5;}
-   
- if(rotation>=360)
-   {rotation=0;}
- 
- 
- p.rotate(p.radians(rotation));
- flowers[i].display();
- PositionX=PositionX+200;
-  
-   p.pop();
- }
-
-
-
-
-
-
-
-}
-
-
-
-
-}
-
+   {rotation=rotation+0.5;}}
+} }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:title="Principal">
+        <item
+            android:id="@+id/nav_home"
+            android:title="home"
+            android:icon="@drawable/ic_home"></item>
+        <item
+            android:id="@+id/nav_person"
+            android:title="person"
+            android:icon="@drawable/ic_person"></item>
+        <item
+            android:id="@+id/nav_camara"
+            android:title="Camara"
+            android:icon="@drawable/ic_camara">
+
+        </item>
+    </group>
+
+</menu>

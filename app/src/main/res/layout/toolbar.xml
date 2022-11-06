@@ -8,10 +8,10 @@
 
     <androidx.appcompat.widget.Toolbar
         android:background="@color/blue_atn"
-    android:elevation="4dp"
     android:id="@+id/toolbar_id"
     android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     </androidx.appcompat.widget.Toolbar>
         

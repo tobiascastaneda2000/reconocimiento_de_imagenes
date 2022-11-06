@@ -13,7 +13,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Inicio"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ateneo2">
@@ -27,7 +27,8 @@
         </activity>
         <activity
             android:name=".WebActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Pagina Web">
         </activity>
         <activity
             android:name=".AnalysisActivity"

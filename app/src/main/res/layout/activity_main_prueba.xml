@@ -5,11 +5,13 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
+
     tools:context=".MainActivityPrueba">
     <!--tools:openDrawer="start"-->
 
    <!--Contiene el toolBar-->
+
+
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +34,9 @@
         app:headerLayout="@layout/header"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-         />
+         >
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

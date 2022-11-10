@@ -74,6 +74,7 @@ public class MainActivityPrueba extends AppCompatActivity implements NavigationV
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_id, new MainFragment());
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 
@@ -81,6 +82,7 @@ public class MainActivityPrueba extends AppCompatActivity implements NavigationV
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_id, new PersonFragment());
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 
@@ -88,6 +90,7 @@ public class MainActivityPrueba extends AppCompatActivity implements NavigationV
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_id, new CameraFragment());
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 

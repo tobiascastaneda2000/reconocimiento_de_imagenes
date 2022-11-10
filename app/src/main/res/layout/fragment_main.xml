@@ -1,33 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.MainFragment">
+    <!--android:background="@color/black_fondo"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--SI agrego color de fondo a Frangmento, tapa la barra del menu, ¿porque?-->
 
 
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="263dp"
-        android:layout_height="229dp"
-        android:fontFamily="@font/signika_light"
-        android:text="@string/app_name"
-        android:textColor="@color/green_ligth_atn"
-        android:textSize="50sp"
+    <Button
+        android:id="@+id/button_comenzar"
+        android:layout_width="299dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/purple_500"
+        android:text="Button"
+        android:theme="@style/Widget.AppCompat.Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/asocPoeticaAleatoria_id"
+        android:layout_width="261dp"
+        android:layout_height="189dp"
+        android:fontFamily="@font/signika_light"
+        android:text="Asociacion Poetica Aleatoria"
+        android:textColor="@color/green_ligth_atn"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <TextView
+        android:id="@+id/year_id"
+        android:layout_width="31dp"
+        android:layout_height="205dp"
+        android:fontFamily="@font/signika_light"
+        android:text="2022"
+        android:textColor="@color/blue_atn"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/asocPoeticaAleatoria_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
+
+    <TextView
+        android:id="@+id/instruvtions_id"
+        android:layout_width="270dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="56dp"
+        android:text="@string/instructions"
+        android:textAlignment="center"
+        android:textColor="@color/blue_ligth_atn"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/ateneo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageAteneo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ateneo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

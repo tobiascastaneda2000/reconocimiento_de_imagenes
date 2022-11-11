@@ -28,9 +28,9 @@
 
 
     <!-- Etiquetas Titule -->
-    <string name="txt_el_ateneo">El Ateneo</string>
-    <string name="txt_espacio">Espacio de tecnologías aplicadas</string>
-    <string name="txt_tecnologies">tecnologías utilizadas: </string>
+    <string name="txt_el_ateneo">EL ATENEO</string>
+    <string name="txt_espacio">ESPACIO DE TECNOLOGIAS APLICADAS</string>
+    <string name="txt_tecnologies">TECNOLOGIAS APLICADAS: </string>
 
     <string name="drawer_open">open</string>
     <string name="drawer_close">open</string>

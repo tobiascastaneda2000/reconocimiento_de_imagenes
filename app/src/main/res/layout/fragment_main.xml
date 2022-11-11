@@ -7,7 +7,6 @@
     tools:context=".Fragments.MainFragment">
     <!--android:background="@color/black_fondo"-->
     <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--SI agrego color de fondo a Frangmento, tapa la barra del menu, ¿porque?-->
 
 
     <Button
@@ -16,7 +15,8 @@
         android:layout_height="52dp"
         android:layout_marginBottom="16dp"
         android:background="@color/purple_500"
-        android:text="Button"
+        android:text="COMENZAR"
+        android:textColor="@color/white"
         android:theme="@style/Widget.AppCompat.Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +59,9 @@
         android:layout_marginStart="56dp"
         android:text="@string/instructions"
         android:textAlignment="center"
-        android:textColor="@color/blue_ligth_atn"
+        android:textColor="@color/green_aquamarine_atn"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

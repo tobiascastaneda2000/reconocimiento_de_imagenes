@@ -3,7 +3,6 @@ package xyz.dev3k.ateneo2.Fragments;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.Image;
 import android.net.Uri;
@@ -31,6 +30,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -47,11 +47,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 
-import xyz.dev3k.ateneo2.AnalysisActivity;
-import xyz.dev3k.ateneo2.CaptureActivity;
 import xyz.dev3k.ateneo2.R;
 
-public class CameraFragment extends Fragment implements View.OnClickListener{
+public class CameraFragment extends Fragment implements View.OnClickListener, ImageAnalysis.Analyzer{
 
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
@@ -73,7 +71,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
         //setContentView(R.layout.activity_capture);
         imageCaptureButton = view.findViewById(R.id.capture_button);
         videoCaptureButton = view.findViewById(R.id.video_capture_button);
-        fileButton = view.findViewById(R.id.btn_file);
+        fileButton = view.findViewById(R.id.button_file);
         previewView = view.findViewById(R.id.viewFinder_id);
 
         imageCaptureButton.setOnClickListener(this);
@@ -165,7 +163,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
 
         imageCapture.takePicture(
                 new ImageCapture.OutputFileOptions.Builder(
-                        getContext().getContentResolver(),
+                        requireContext().getContentResolver(),
                         MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                         contentValues
                 ).build(),
@@ -193,7 +191,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
         startActivity(intent);*/
 
         /*BUscar forma de pasar metadatos entre fragmentos*/
-
+/**/
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -212,7 +210,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
             ContentValues contentValues = new ContentValues();
             contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, timestamp);
             contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "video/mp4");
-            if (ActivityCompat.checkSelfPermission(this.getContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -244,11 +242,13 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
             );
         }
     }
+/*
 
+    Deberia andar sin comentar...
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
-    }
+    }*/
 
     @Override
     public void analyze(ImageProxy imageProxy) {
@@ -280,4 +280,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
                     });
         }
     }
+
+
+
 }

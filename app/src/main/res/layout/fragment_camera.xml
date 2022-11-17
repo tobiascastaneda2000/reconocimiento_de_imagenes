@@ -7,6 +7,13 @@
     tools:context=".Fragments.CameraFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.camera.view.PreviewView>
+
     <Button
         android:id="@+id/capture_button"
         android:layout_width="97dp"
@@ -25,13 +32,6 @@
         android:text="Camera"
         android:gravity="center"
         android:textSize="34sp"/>
-
-    <androidx.camera.view.PreviewView
-        android:id="@+id/viewFinder_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.camera.view.PreviewView>
 
     <Button
         android:id="@+id/video_capture_button"

@@ -191,14 +191,14 @@ public class CameraFragment extends Fragment implements View.OnClickListener, Im
         startActivity(intent);*/
 
         /*BUscar forma de pasar metadatos entre fragmentos*/
-/**/
+/**//*
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.replace(R.id.container_id, new AnalisisFragment());
         fragmentTransaction.addToBackStack(null);
 
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
 
     }
 
@@ -243,8 +243,6 @@ public class CameraFragment extends Fragment implements View.OnClickListener, Im
         }
     }
 /*
-
-    Deberia andar sin comentar...
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);

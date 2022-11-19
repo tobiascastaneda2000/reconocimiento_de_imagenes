@@ -35,13 +35,13 @@
 
     <TextView
         android:id="@+id/app_name"
-        android:layout_width="263dp"
-        android:layout_height="229dp"
+        android:layout_width="283dp"
+        android:layout_height="227dp"
         android:layout_marginTop="124dp"
         android:fontFamily="@font/signika_light"
         android:text="@string/app_name"
         android:textColor="@color/green_ligth_atn"
-        android:textSize="50sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
         android:textColor="@color/blue_ligth_atn"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toEndOf="@+id/app_name"
         app:layout_constraintTop_toTopOf="parent" />
 

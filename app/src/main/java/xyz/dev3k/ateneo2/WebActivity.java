@@ -9,7 +9,7 @@ import android.webkit.WebViewClient;
 
 public class WebActivity extends AppCompatActivity {
 
-    String url = "https://www.infocanuelas.com/informacion-general/horarios-del-nuevo-servicio-de-combis-entre-maximo-paz-liniers-y-obelisco";
+    String url = "https://poeticaleatoria.web.app/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

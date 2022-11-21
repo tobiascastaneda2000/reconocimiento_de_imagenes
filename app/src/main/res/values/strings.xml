@@ -2,20 +2,20 @@
     <string name="btn_capturar_img">Capturar</string>
     <string name="btn_ver_repositorio">Repositorio</string>
 
-    <string name="take_photo">Tomar Foto</string>
+    <string name="take_photo">CAPTURAR</string>
     <string name="start_capture">Grabar</string>
     <string name="stop_capture">Parar</string>
     <string name="btn_file_text">File</string>
     <string name="lbl_analysis_activity">Analisis de imagen</string>
     <string name="lbl_capture_activity">Camara</string>
     <string name="btn_reconocer_texto">Reconocer Texto</string>
-    <string name="btn_etiquetar">Etiquetar</string>
+    <string name="btn_etiquetar">GENERAR POESÍA ALEATORIA</string>
     <string name="select_image_for_text_recognition">Seleccionar imagen</string>
     <string name="find_text_button">Reconocer Texto</string>
     <string name="find_face_contour_button">Reconocer cara</string>
 
     <!-- Etiquetas Main -->
-    <string name="app_name">ASOCIACION POETICA ALEATORIA</string>
+    <string name="app_name">POÉTICA   ALEATORIA</string>
     <string name="year">2 0 2 2</string>
     <string name="instructions">Breve explicativo de como funciona la aplicacion paso a paso</string>
     <string name="button_start">Comenzar</string>
@@ -39,9 +39,9 @@
     <string name="bioKarla_id">Programadora y antropóloga. le encanta descubrir mundos nuevos, armar artefactos digitales y crear. le encantan las metodologías que permiten poner orden en el caos, investigar para el diseño y facilitar el trabajo en equipo.</string>
     <string name="bioLucia_id">Desarrolladora Frontend freelance, Artista Sonora y Coreógrafa. trabaja Realizando el diseño sonoro para proyectos audiovisuales, de danza, y videojuegos. FUTURA diseñadora ux, actualmente cursando la Diplomatura en Desarrollo Artístico de Videojuegos (UNCuyo). le encanta la creación de mundos virtuales.</string>
     <string name="bioTobias_id">Estudiante de ingenieria en Sistemas de Informacion, Desarrollador joven n busca de nuevos retos y con ansias de crecer en el mundo laboral, con experiencia en Java , React, Android Studio, entre otros.. Experiencia en diseño y maquetado.</string>
-    <string name="bioBelen_id">entusiasta, curiosa nerd, ama la oratoria, y es roboticista. Voluntaria activa de distintas comunidades de mujeres en tecnología y dibujante a toda hora.</string>
+    <string name="bioBelen_id">Entusiasta, curiosa nerd, ama la oratoria, y es roboticista. Voluntaria activa de distintas comunidades de mujeres en tecnología y dibujante a toda hora.</string>
     <string name="bioGabriel_id">Desarrollador Full-stack web y Mobile. Autodidacta. Con experiencia en el manejo de base de datos</string>
-    <string name="nameKarla_id">kARLA AGUILERA</string>
+    <string name="nameKarla_id">KARLA AGUILERA</string>
     <string name="nameLucia_id">LUCIA ROIG SEIGNUER</string>
 
 </resources>

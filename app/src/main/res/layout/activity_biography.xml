@@ -15,71 +15,119 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/nameKarla_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/nameKarla_id"
+                android:textAlignment="textStart"
                 android:textColor="@color/blue_atn"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/bioKarla_id"
-                android:layout_width="226dp"
-                android:layout_height="264dp"
-                android:text="@string/bioKarla_id"
-                android:textColor="@color/green_ligth_atn"
-                android:textSize="20sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            </TextView>
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="148dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/foto_karla" />
+
+                <TextView
+                    android:id="@+id/bioKarla_id"
+                    android:layout_width="299dp"
+                    android:layout_height="209dp"
+                    android:text="@string/bioKarla_id"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/green_aquamarine_atn"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/nameLucia_id"
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
                 android:text="@string/nameLucia_id"
+                android:textAlignment="textEnd"
                 android:textColor="@color/blue_atn"
                 android:textSize="20sp">
 
             </TextView>
 
-            <TextView
-                android:id="@+id/bioLucia_id"
-                android:layout_width="252dp"
-                android:layout_height="342dp"
-                android:text="@string/bioLucia_id"
-                android:textColor="@color/green_ligth_atn"
-                android:textSize="20sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            </TextView>
+                <TextView
+                    android:id="@+id/bioLucia_id"
+                    android:layout_width="285dp"
+                    android:layout_height="294dp"
+                    android:text="@string/bioLucia_id"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_aquamarine_atn"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="144dp"
+                    android:layout_height="293dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/foto_lucia" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/nameTobias_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TOBIAS CASTAÑEDA"
+                android:textAlignment="textStart"
                 android:textColor="@color/blue_atn"
                 android:textSize="20sp">
 
             </TextView>
 
-            <TextView
-                android:id="@+id/bioTobias_id"
-                android:layout_width="261dp"
-                android:layout_height="260dp"
-                android:text="@string/bioTobias_id"
-                android:textColor="@color/green_ligth_atn"
-                android:textSize="20sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            </TextView>
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="153dp"
+                    android:layout_height="260dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/foto_tobias" />
+
+                <TextView
+                    android:id="@+id/bioTobias_id"
+                    android:layout_width="261dp"
+                    android:layout_height="260dp"
+                    android:text="@string/bioTobias_id"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/green_aquamarine_atn"
+                    android:textSize="20sp">
+
+                </TextView>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/nameBelen_id"
@@ -91,36 +139,69 @@
 
             </TextView>
 
-            <TextView
-                android:id="@+id/bioBelen_id"
-                android:layout_width="220dp"
-                android:layout_height="160dp"
-                android:text="@string/bioBelen_id"
-                android:textColor="@color/green_ligth_atn"
-                android:textSize="20sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            </TextView>
+                <TextView
+                    android:id="@+id/bioBelen_id"
+                    android:layout_width="265dp"
+                    android:layout_height="207dp"
+                    android:text="@string/bioBelen_id"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_aquamarine_atn"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="171dp"
+                    android:layout_height="207dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/foto_belen" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/nameGabriel_id"
                 android:layout_width="match_parent"
-                android:layout_height="59dp"
+                android:layout_height="38dp"
                 android:text="GABRIEL TCRAK"
+                android:textAlignment="textStart"
                 android:textColor="@color/blue_atn"
                 android:textSize="20sp">
 
             </TextView>
 
-            <TextView
-                android:id="@+id/bioGabriel_id"
-                android:layout_width="205dp"
-                android:layout_height="164dp"
-                android:text="@string/bioGabriel_id"
-                android:textColor="@color/green_ligth_atn"
-                android:textSize="20sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            </TextView>
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="92dp"
+                    android:layout_height="145dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/foto_gabi" />
+
+                <TextView
+                    android:id="@+id/bioGabriel_id"
+                    android:layout_width="205dp"
+                    android:layout_height="164dp"
+                    android:text="@string/bioGabriel_id"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/green_aquamarine_atn"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

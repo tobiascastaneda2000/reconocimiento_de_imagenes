@@ -66,11 +66,11 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
 
         Button buttonAnalyzer = findViewById(R.id.button_analizer);
         Button buttonTextRecognizer = findViewById(R.id.button_text_recognizer);
-        Button buttonPosesDetect = findViewById(R.id.button_poses_detect);
+        //Button buttonPosesDetect = findViewById(R.id.button_poses_detect);
 
         buttonTextRecognizer.setOnClickListener(this);
         buttonAnalyzer.setOnClickListener(this);
-        buttonPosesDetect.setOnClickListener(this);
+        //buttonPosesDetect.setOnClickListener(this);
 
         Bundle extras = getIntent().getExtras();
         if(extras!=null){
@@ -116,9 +116,9 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
             case R.id.button_text_recognizer:
                 runTextRecognizer();
                 break;
-            case R.id.button_poses_detect:
+            /*case R.id.button_poses_detect:
                 runDetectPoses();
-                break;
+                break;*/
         }
     }
 

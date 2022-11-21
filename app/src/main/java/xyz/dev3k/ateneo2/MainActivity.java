@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_etiquetar:
-                launchAnalysisActivity(view);
+                launchBioActivity(view);
                 break;
 
         }
@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void launchWebActivity(View view) {
         Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchBioActivity(View view) {
+        Intent intent = new Intent(this, BiographyActivity.class);
         startActivity(intent);
     }
 

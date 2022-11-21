@@ -26,26 +26,17 @@
 
             <Button
                 android:id="@+id/button_analizer"
-                android:layout_width="210dp"
+                android:layout_width="358dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="@string/btn_etiquetar" />
+                android:background="@color/black_fondo"
+                android:text="@string/btn_etiquetar"
+                android:textColor="@color/green_aquamarine_atn" />
 
-            <Button
-                android:id="@+id/button_text_recognizer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:paddingStart="40dp"
-                android:paddingLeft="40dp"
-                android:paddingEnd="40dp"
-                android:paddingRight="40dp"
-                android:text="@string/btn_reconocer_texto" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,11 +45,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_poses_detect"
+                android:id="@+id/button_text_recognizer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Detectar Pose!!" />
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/purple_700"
+                android:paddingStart="40dp"
+                android:paddingLeft="40dp"
+                android:paddingEnd="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/btn_reconocer_texto"
+                android:textColor="@color/white"
+                android:visibility="invisible"/>
         </LinearLayout>
 
     </LinearLayout>

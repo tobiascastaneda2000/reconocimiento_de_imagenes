@@ -92,11 +92,11 @@
 
     <TextView
         android:id="@+id/instructions"
-        android:layout_width="254dp"
-        android:layout_height="117dp"
-        android:layout_marginTop="372dp"
+        android:layout_width="284dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="348dp"
         android:fontFamily="@font/montserrat_thin"
-        android:text="@string/instructions"
+        android:text="Mirá como tus imágenes crean poemas. Saca tu fotografía, da click en etiquetar, envíala y mirá el poema que se arma"
         android:textAlignment="center"
         android:textColor="@color/green_aquamarine_atn"
         android:textSize="24sp"

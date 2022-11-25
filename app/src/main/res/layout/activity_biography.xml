@@ -18,12 +18,67 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints">
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/el_ateneo_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="        EL ATENEO"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/espacio_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESPACIO DE TECNOLOGÍAS APLICADAS"
+                    android:textAlignment="center"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:id="@+id/tecnologias_aplicadas_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TECNOLOGÍAS UTILIZADAS"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_atn"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"/>
+
+                <!-- Aca ingresar logos de react, firebase y otro-->
+            </LinearLayout>
+
+
+
+
 
             <TextView
                 android:id="@+id/nameKarla_id"
@@ -49,7 +104,7 @@
                 <TextView
                     android:id="@+id/bioKarla_id"
                     android:layout_width="299dp"
-                    android:layout_height="209dp"
+                    android:layout_height="208dp"
                     android:text="@string/bioKarla_id"
                     android:textAlignment="textEnd"
                     android:textColor="@color/green_aquamarine_atn"
@@ -78,7 +133,7 @@
                 <TextView
                     android:id="@+id/bioLucia_id"
                     android:layout_width="285dp"
-                    android:layout_height="294dp"
+                    android:layout_height="313dp"
                     android:text="@string/bioLucia_id"
                     android:textAlignment="textStart"
                     android:textColor="@color/green_aquamarine_atn"
@@ -92,6 +147,7 @@
                     android:layout_height="293dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/foto_lucia" />
+
             </LinearLayout>
 
             <TextView
@@ -127,6 +183,7 @@
                     android:textSize="20sp">
 
                 </TextView>
+
             </LinearLayout>
 
             <TextView
@@ -200,8 +257,8 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

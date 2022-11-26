@@ -4,8 +4,8 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black_fondo</item>
         <item name="colorPrimaryVariant">@color/blue_atn1</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColor">@color/green_ligth_atn</item>
+        <item name="colorOnPrimary">#44F01F</item>
+        <item name="android:textColor">#44F01F</item>
         <item name="android:gravity"> right</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -14,5 +14,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Ateneo3" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#261FF0</item>
     </style>
 </resources>

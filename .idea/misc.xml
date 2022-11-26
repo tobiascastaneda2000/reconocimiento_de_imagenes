@@ -7,12 +7,13 @@
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/font/montserrat_thin.xml" value="0.15260416666666668" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/font/signika_light.xml" value="0.171875" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_analysis.xml" value="0.33" />
-        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_biography.xml" value="0.20520833333333333" />
-        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_capture.xml" value="0.22604166666666667" />
-        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_biography.xml" value="0.33" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_capture.xml" value="0.25" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_galery.xml" value="0.19739583333333333" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_main_prueba.xml" value="0.12409420289855072" />
-        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_titule.xml" value="0.21" />
-        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_web.xml" value="0.22" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_titule.xml" value="0.25" />
+        <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/activity_web.xml" value="0.18" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/container_fragments.xml" value="0.22" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/fragment_analisis.xml" value="0.13069908814589665" />
         <entry key="..\:/Ateneo/androidApp/reconocimientodeimagenes/app/src/main/res/layout/fragment_blanco.xml" value="0.12239583333333333" />

@@ -16,18 +16,20 @@
         <ImageView
             android:id="@+id/analysis_iv"
             android:layout_width="match_parent"
-            android:layout_height="646dp"
+            android:layout_height="592dp"
             android:contentDescription="Image to analysis"
             app:srcCompat="@android:drawable/ic_menu_gallery" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button_analizer"
-                android:layout_width="358dp"
+                android:layout_width="371dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -36,13 +38,15 @@
                 android:layout_weight="1"
                 android:background="@color/black_fondo"
                 android:text="@string/btn_etiquetar"
-                android:textColor="@color/green_aquamarine_atn" />
+                android:textColor="@color/green_aquamarine_atn"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -58,7 +62,7 @@
                 android:paddingRight="40dp"
                 android:text="@string/btn_reconocer_texto"
                 android:textColor="@color/white"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
         </LinearLayout>
 
     </LinearLayout>

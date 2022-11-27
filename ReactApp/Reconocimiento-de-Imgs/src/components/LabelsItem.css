@@ -32,4 +32,27 @@
 }
 
 
+@media only screen
+and (max-device-width: 700px)
+{   .card{
+    border: 1px solid seagreen;
+    padding: 10px;
+    margin: 10px 15px;   
+    height: 100vh;
+}
+    
+    .container2 {
+    /*width: 200px;*/
+    height: 60vh;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+}
+.container2 > .img {
+    position:absolute;
 
+    min-height: 100%;
+    width: 100%;
+}
+
+}

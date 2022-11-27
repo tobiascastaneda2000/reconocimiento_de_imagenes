@@ -1,7 +1,7 @@
 
 .container2 {
-    width: 200px;
-    height: 200px;
+    /*width: 200px;*/
+    height: 300px;
     overflow: hidden;
     margin: 10px;
     position: relative;
@@ -20,13 +20,15 @@
     margin-left: 100px;
     display: inline-block;
     margin: 0 0;
+    font-family: 'Edu NSW ACT Foundation';
+    font-size: 14px!important;
 }
 
 .card{
     border: 1px solid seagreen;
-    padding: 2rem;
+    padding: 10px;
     margin: 10px 15px;   
-    max-height: 325px;
+    max-height: 80vh;
 }
 
 

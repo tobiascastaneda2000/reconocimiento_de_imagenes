@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import {
   collection,
   getDocs,
@@ -10,6 +11,7 @@ import { LabelsItem } from "./LabelsItem";
 import "./LabelsList.css";
 
 import { Grid, Pagination } from "@mui/material";
+import ReactAudioPlayer from 'react-audio-player';
 
 
 export const LabelsList = () => {
@@ -46,9 +48,10 @@ export const LabelsList = () => {
 
   return (
     <div>
+ 
     <Grid container className="labels-list">
       {ReferenciaImagenes.map((image, index) => (
-        <Grid key={index} item md={4} xs={4}>
+        <Grid key={index} item md={4} xs={12}>
           <LabelsItem key={index} nameFile={image.nameFile} labels={image.labels} />
         </Grid>
       ))}

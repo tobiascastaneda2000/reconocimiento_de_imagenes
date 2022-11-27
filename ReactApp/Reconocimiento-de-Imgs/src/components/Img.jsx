@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import Grid from '@mui/material/Grid';
 import  "./LabelsList.css";
+import {Box} from "@mui/material"
 
 export const Img = ({ props }) => {
   // console.log(`estas son las props de imagenes ${props}`)
@@ -19,12 +21,18 @@ export const Img = ({ props }) => {
         // Handle any errors
       }).finally();
 
-   
+     
  
   },[]);
 
+
+ 
+
   return (
-    <div className="container2">
-      <img src={ReferenciaImagenes} className='img'></img>     
+    <div className="container2" >
+
+      <img   src={ReferenciaImagenes} className='img'></img> 
+        
+  
     </div> )
 };

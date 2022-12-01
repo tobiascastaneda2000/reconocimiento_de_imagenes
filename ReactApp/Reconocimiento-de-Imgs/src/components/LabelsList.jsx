@@ -45,8 +45,8 @@ export const LabelsList = () => {
 
     let nuevasImagenes=ImagenesEtiquetadas.map((image,index)=>{
 
-      let year=image.nameFile.slice(30,300);  
-      let dia=image.nameFile.slice(8,10);
+      let year=image.nameFile.slice(30,34);  
+      let dia=image.nameFile.slice(8,11);
       let mes=image.nameFile.slice(4,7);  
       let hora=image.nameFile.slice(11,13);
       let minuto=image.nameFile.slice(14,16);
@@ -54,47 +54,46 @@ export const LabelsList = () => {
       let mesIndex
       switch(mes)
       { case "Jan":
-        mesIndex = 1
-        break;
-        case "Feb":
-          mesIndex=2
+         mesIndex =0
+         break;
+         case "Feb":
+          mesIndex=1
           break;
           case"Mar":
-          mesIndex=3
+          mesIndex=2
           break;
           case"Apr":
-          mesIndex=4
+          mesIndex=3
           break;
           case"May":
-          mesIndex=5
+          mesIndex=4
           break;
           case"Jun":
-          mesIndex=6
+          mesIndex=5
           break;
           case"Jul":
-          mesIndex=7
+          mesIndex=6
           break;
           case"Aug":
-          mesIndex=8
+          mesIndex=7
           break; 
           case"Sep":
-          mesIndex=9
+          mesIndex=8
           break;
           case"Oct":
-          mesIndex=10
+          mesIndex=9
           break;
           case"Nov":
-          mesIndex=11
+          mesIndex=10
           break;
           case"Dec":
-          mesIndex=12
+          mesIndex=11
           break;
-          default:
-            mesIndex=12}
+        }
     
     
     console.log("este es el año "+ year + "este es el día " + dia + " este es el el mes "+ mesIndex + "esta es la hora "+hora + "estos son los minutos"+minuto +"estos son los segundos " +segundos)  
-    let fecha=new Date(year, dia, mesIndex, hora, minuto, segundos );
+    let fecha=new Date(year, mesIndex, dia, hora, minuto, segundos );
     console.log(fecha);
     return Object.defineProperty(image,"date", {
       value:fecha,
@@ -106,11 +105,12 @@ export const LabelsList = () => {
     console.log("este es el tipo de dato de nueasImagenes "+ typeof nuevasImagenes)
     console.log(nuevasImagenes)
 
-     nuevasImagenes.sort((a,b)=> b.date-a.date);    
-    setReferenciaImagenes(nuevasImagenes);
+     let imagenesOrdenadas=nuevasImagenes.sort((a,b)=> {return b.date - a.date});    
+    setReferenciaImagenes(imagenesOrdenadas);
+    
    
      
-  })
+  } )
  
 
 
@@ -120,7 +120,8 @@ export const LabelsList = () => {
     <div>
  
     <Grid container className="labels-list">
-      {ReferenciaImagenes.map((image, index) => (
+      {
+      ReferenciaImagenes.map((image, index) => (
        
 
 

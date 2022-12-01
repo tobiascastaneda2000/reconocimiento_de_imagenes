@@ -104,8 +104,8 @@ let Font2;
 let displayTimeSentence;
 let sentences;
 let fontSize;
-let link = p.createA('https://poeticaleatoria.web.app/', 'volver')
-link.position(p.windowWidth*0.5, p.windowHeight*0.8)
+let link = p.createA('https://poeticaleatoria.web.app/', 'ver más historias')
+link.position(p.windowWidth*0.25, p.windowHeight*0.8)
 
 rotationSpeed=1;
   rotation=1;
@@ -151,7 +151,7 @@ rotationSpeed=1;
 
 p.draw=()=>{
   
-displayTimeSentence=p.round(p.millis()/3000);
+displayTimeSentence=p.round(p.millis()/6000);
 
   p.fill(9,2,36,70);
   p.rect(0,0,p.displayWidth, p.displayHeight);

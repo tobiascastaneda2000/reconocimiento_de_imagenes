@@ -38,7 +38,7 @@ export const LabelsItem = (props) => {
   let indices = props.labels.map(label => (label.index));
   const [LoadTime, setLoadTime]=useState(true)
   useEffect(()=>{
-    setTimeout(()=>{setLoadTime(false)},2000)
+    setTimeout(()=>{setLoadTime(false)},1000)
   },[])
   const windowSize=screen.width;
 

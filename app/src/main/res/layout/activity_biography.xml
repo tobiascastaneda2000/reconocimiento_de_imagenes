@@ -146,7 +146,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:foregroundGravity="top"
-                    app:srcCompat="@drawable/foto_karla" />
+                    app:srcCompat="@drawable/foto_karla_aguilera" />
 
                 <TextView
                     android:id="@+id/bioKarla_id"
@@ -235,7 +235,7 @@
                     android:layout_height="220dp"
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/foto_tobias" />
+                    app:srcCompat="@drawable/foto_tobi" />
 
                 <TextView
                     android:id="@+id/bioTobias_id"
@@ -293,7 +293,7 @@
                     android:layout_height="220dp"
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/foto_belen" />
+                    app:srcCompat="@drawable/foto_belen_torres" />
 
             </LinearLayout>
 
@@ -322,7 +322,7 @@
                     android:layout_width="114dp"
                     android:layout_height="220dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/foto_gabi" />
+                    app:srcCompat="@drawable/foto_gaby" />
 
                 <TextView
                     android:id="@+id/bioGabriel_id"

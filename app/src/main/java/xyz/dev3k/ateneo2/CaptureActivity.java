@@ -126,7 +126,8 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
         switch (view.getId()) {
             case R.id.image_capture_button:
                 capturePhoto();
-                //launchAnalysisActivity();
+                //buscarEnGaleria();
+
                 break;
             case R.id.video_capture_button:
                 if (videoCaptureButton.getText() == "grabar") {
@@ -138,7 +139,10 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
             case R.id.btn_file:
+
                 //launchAnalysisActivity(view);
+                break;
+
         }
     }
 
@@ -257,9 +261,35 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                     });
         }
     }
+/*
+    public void buscarEnGaleria() {
+        // Launches photo picker in single-select mode.
+//
+
+        @SuppressLint("IntentReset") Intent pickIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        pickIntent.setType("image/* video/*");
+        //startActivityForResult(pickIntent, IMAGE_PICKER_SELECT);
+
+
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            Uri selectedMediaUri = data.getData();
+            if (selectedMediaUri.toString().contains("image")) {
+                launchAnalysisActivity(selectedMediaUri);
+            } else if (selectedMediaUri.toString().contains("video")) {
+                //handle video
+            }
+        }
+    }*/
+
+
 
 
    /* public void setAnalizer( ImageAnalysis.Analyzer analizer) {
         this.analizer = analizer;
     }*/
-}
+    }

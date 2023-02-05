@@ -21,6 +21,11 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.label.ImageLabel;
 import com.google.mlkit.vision.label.ImageLabeler;
@@ -37,13 +42,20 @@ import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
+
+import xyz.dev3k.ateneo2.model.ImagenEtiquetada;
 
 public class AnalysisActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView image;
     private InputImage imageInput;
     private Task<Text> result;
     private Task<Pose> resultPoses;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    //Reference Firebase starage
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageRef = storage.getReference("/Images");
     private Uri uri;
     // To use default options:
     ImageLabeler labeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
@@ -141,6 +153,38 @@ public class AnalysisActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(AnalysisActivity.this, text, Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "Etiqueta: " + labels);
                         }
+                        String fileName = new Date().toString();
+                        // Create a reference
+                        StorageReference filePath = storageRef.child(fileName);
+
+                        filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                        //Toast.makeText(AnalysisActivity.this, "", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(AnalysisActivity.this, "Error, no se etiquetó la imagen", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                        ImagenEtiquetada imagenEtique = new ImagenEtiquetada(labels, fileName);
+                        db.collection("ImagenesEtiquetadas")
+                                .add(imagenEtique)
+                                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference) {
+                                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.w(TAG, "Error adding document", e);
+                                    }
+                                });
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

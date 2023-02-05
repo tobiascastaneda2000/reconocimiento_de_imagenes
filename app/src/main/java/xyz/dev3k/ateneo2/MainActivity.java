@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void launchCaptureActivity(View view) {
         Intent intent = new Intent(this, CaptureActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.zoom_back_in,R.anim.zoom_back_out);
     }
     //Intent AnalysisActivity
     public void launchAnalysisActivity(View view) {
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void launchBioActivity(View view) {
         Intent intent = new Intent(this, BiographyActivity.class);
         startActivity(intent);
+        //PARA Transiciones
+        overridePendingTransition(R.anim.zoom_back_in,R.anim.zoom_back_out);
     }
 
     //Solicitud de permisos

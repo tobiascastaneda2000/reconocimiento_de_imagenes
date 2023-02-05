@@ -7,17 +7,21 @@
     android:background="@color/black_fondo"
     tools:context=".TituleActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="354dp"
-        android:layout_height="570dp"
-        android:src="@drawable/titulo_imagenes"
+    <TextView
+        android:id="@+id/poeticasAletorias_id"
+        android:layout_width="409dp"
+        android:layout_height="181dp"
+        android:fontFamily="@font/signika_light"
+        android:text="Poéticas Aleatorias"
+        android:textAlignment="center"
+        android:textColor="#00E0DE"
+        android:textSize="60sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"

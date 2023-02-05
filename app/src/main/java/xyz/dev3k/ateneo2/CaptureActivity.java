@@ -59,6 +59,12 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
     private String TAG;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_in,R.anim.left_out);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capture);
@@ -141,7 +147,7 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btn_file:
 
                 //launchAnalysisActivity(view);
-                break;
+                //break;
 
         }
     }
